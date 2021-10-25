@@ -16,7 +16,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/lab2?serverTimezone=GMT%2B8
     username: root
-    password: cyx2000!
+    password: qzqz111
     type: com.alibaba.druid.pool.DruidDataSource
     initialization-mode: always
     schema: classpath:lab2-3schema.sql
