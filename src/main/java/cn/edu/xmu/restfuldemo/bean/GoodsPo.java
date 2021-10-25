@@ -3,13 +3,15 @@ package cn.edu.xmu.restfuldemo.bean;
 import lombok.*;
 
 import java.math.BigDecimal;
+import org.apache.ibatis.type.Alias;
 import java.util.Date;
 
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class goodsPo {
+@Alias("GoodsPo")
+public class GoodsPo {
     private Integer id;
     private Integer goods_spu_id;
     private String sku_sn;
