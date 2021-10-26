@@ -1,35 +1,32 @@
 package cn.edu.xmu.restfuldemo.bean;
 
-import lombok.*;
-
-import java.math.BigDecimal;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.apache.ibatis.type.Alias;
-import java.util.Date;
 
+import java.util.Date;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Alias("GoodsPo")
-public class GoodsPo {
+@Alias("ProductPo")
+public class ProductPo {
     private Integer id;
-    private Integer goodsSkuId;
+    private Integer goodsId;
+    private Integer productSn;
     private String skuSn;
-    private Integer brandId;
-    private Integer categoryId;
-    private Integer freightId;
-    private Integer shopId;
-    private String goodsSn;
     private String name;
     private Integer originalPrice;
-    private String configuration;
+    private Integer price;
     private Integer weight;
     private String imageUrl;
     private Integer inventory;
+    private Integer state;
     private String detail;
-    private Integer disabled;
     private Date gmtCreate;
     private Date gmtModified;
-    private Integer state;
-
+    private Integer disabled;
+    private Goods goods;
 }

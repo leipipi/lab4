@@ -30,7 +30,7 @@ DROP TABLE IF EXISTS `goods_sku`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `goods_sku` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `goods_spu_id` bigint DEFAULT NULL,
+  `goods_sku_id` bigint DEFAULT NULL,
   `sku_sn` varchar(128) DEFAULT NULL,
   `brand_id` bigint DEFAULT NULL,
   `category_id` bigint DEFAULT NULL,
