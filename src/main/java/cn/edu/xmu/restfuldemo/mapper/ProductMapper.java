@@ -6,5 +6,5 @@ import cn.edu.xmu.restfuldemo.bean.ProductsPo;
 import java.util.List;
 
 public interface ProductMapper {
-    List<ProductsPo> findProductsWithGood(ProductsPo productPo);
+    List<ProductsPo> findProducts(ProductsPo productPo);
 }

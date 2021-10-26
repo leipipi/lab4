@@ -46,7 +46,7 @@ public class ProductsService {
             return retProducts;
         }
         else{
-            returnObject=productDao.findProductsWithGood(queryObj);
+            returnObject=productDao.findProducts(queryObj);
             ReturnObject<VoObject> retProducts = null;
             if (returnObject.getCode().equals(ResponseCode.OK)) {
                 if (returnObject.getData().size() == 1) {
