@@ -7,7 +7,7 @@ import lombok.*;
 public class Goods implements VoObject {
     @Override
     public Object createVo(){
-
+        return new GoodsRetVo(this);
     }
 
     public Goods(){this.goodsPo=new GoodsPo();}
@@ -41,4 +41,18 @@ public class Goods implements VoObject {
     public Integer getInventory(){return goodsPo.getInventory();}
     public void setInventory(Integer inventory){goodsPo.setInventory(inventory);}
 
+    public String getDetail(){return goodsPo.getDetail();}
+    public void setDetail(String detail){goodsPo.setDetail(detail);}
+
+    public Integer getDisavled(){return goodsPo.getDisavled();}
+    public void setDisavled(Integer disavled){goodsPo.setDisavled(disavled);}
+
+    public Date getGmt_create(){return goodsPo.getGmt_create();}
+    public void setGmt_create(Date date){goodsPo.setGmt_create(date);}
+
+    public Date getGmt_modified(){return goodsPo.getGmt_modified();}
+    public void setGmt_modified(Date date){goodsPo.setGmt_modified(date);}
+
+    public Integer getState(){return goodsPo.getState();}
+    public void setState(Integer state){goodsPo.setState(state);}
 }
