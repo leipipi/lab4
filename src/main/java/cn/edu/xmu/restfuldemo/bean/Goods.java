@@ -17,17 +17,17 @@ public class Goods implements VoObject {
     public Integer getId(){return goodsPo.getId();}
     public void setId(Integer id){goodsPo.setId(id);}
 
-    public Integer getGoods_sku_id(){return goodsPo.getGoods_sku_id();}
-    public void setGoods_sku_id(Integer id){goodsPo.setGoods_sku_id(id);}
+    public Integer getGoodsSkuId(){return goodsPo.getGoodsSkuId();}
+    public void setGoodsSkuId(Integer id){goodsPo.setGoodsSkuId(id);}
 
-    public String getSku_sn(){return goodsPo.getSku_sn();}
-    public void setSku_sn(String Sku_sn){goodsPo.setSku_sn(Sku_sn);}
+    public String getSkuSn(){return goodsPo.getSkuSn();}
+    public void setSkuSn(String SkuSn){goodsPo.setSkuSn(SkuSn);}
 
     public String getName(){return goodsPo.getName();}
     public void setName(String Name){goodsPo.setName(Name);}
 
-    public Integer getOriginal_price(){return goodsPo.getOriginal_price();}
-    public void setOriginal_price(Integer original_price){goodsPo.setOriginal_price(original_price);}
+    public Integer getOriginalPrice(){return goodsPo.getOriginalPrice();}
+    public void setOriginalPrice(Integer originalPrice){goodsPo.setOriginalPrice(originalPrice);}
 
     public String getConfiguration(){return goodsPo.getConfiguration();}
     public void setConfiguration(String configuration){goodsPo.setConfiguration(configuration);}
@@ -35,8 +35,8 @@ public class Goods implements VoObject {
     public Integer getWeight(){return goodsPo.getWeight();}
     public void setWeight(Integer weight){goodsPo.setWeight(weight);}
 
-    public String getImage_url(){return goodsPo.getImage_url();}
-    public void setImage_url(String image_url){goodsPo.setImage_url(image_url);}
+    public String getImageUrl(){return goodsPo.getImageUrl();}
+    public void setImageUrl(String imageUrl){goodsPo.setImageUrl(imageUrl);}
 
     public Integer getInventory(){return goodsPo.getInventory();}
     public void setInventory(Integer inventory){goodsPo.setInventory(inventory);}
@@ -44,14 +44,14 @@ public class Goods implements VoObject {
     public String getDetail(){return goodsPo.getDetail();}
     public void setDetail(String detail){goodsPo.setDetail(detail);}
 
-    public Integer getDisavled(){return goodsPo.getDisavled();}
-    public void setDisavled(Integer disavled){goodsPo.setDisavled(disavled);}
+    public Integer getDisabled(){return goodsPo.getDisabled();}
+    public void setDisabled(Integer disavled){goodsPo.setDisabled(disavled);}
 
-    public Date getGmt_create(){return goodsPo.getGmt_create();}
-    public void setGmt_create(Date date){goodsPo.setGmt_create(date);}
+    public Date getGmtCreate(){return goodsPo.getGmtCreate();}
+    public void setGmtCreate(Date date){goodsPo.setGmtCreate(date);}
 
-    public Date getGmt_modified(){return goodsPo.getGmt_modified();}
-    public void setGmt_modified(Date date){goodsPo.setGmt_modified(date);}
+    public Date getGmtModified(){return goodsPo.getGmtModified();}
+    public void setGmtModified(Date date){goodsPo.setGmtModified(date);}
 
     public Integer getState(){return goodsPo.getState();}
     public void setState(Integer state){goodsPo.setState(state);}

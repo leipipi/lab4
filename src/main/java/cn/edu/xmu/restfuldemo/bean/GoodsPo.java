@@ -13,17 +13,18 @@ import java.util.Date;
 @Alias("GoodsPo")
 public class GoodsPo {
     private Integer id;
-    private Integer goods_sku_id;
-    private String sku_sn;
+    private Integer goodsSkuId;
+    private String skuSn;
     private String name;
-    private Integer original_price;
+    private Integer originalPrice;
     private String configuration;
     private Integer weight;
-    private String image_url;
+    private String imageUrl;
     private Integer inventory;
     private String detail;
-    private Integer disavled;
-    private Date gmt_create;
-    private Date gmt_modified;
+    private Integer disabled;
+    private Date gmtCreate;
+    private Date gmtModified;
     private Integer state;
 }
+
