@@ -1,6 +1,7 @@
 package cn.edu.xmu.restfuldemo.controller;
 
 
+import cn.edu.xmu.restfuldemo.bean.ProductRetVo;
 import cn.edu.xmu.restfuldemo.bean.VoObject;
 import cn.edu.xmu.restfuldemo.service.ProductsService;
 import cn.edu.xmu.restfuldemo.util.ResponseCode;

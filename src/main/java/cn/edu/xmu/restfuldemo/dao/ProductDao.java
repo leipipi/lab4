@@ -1,9 +1,10 @@
 package cn.edu.xmu.restfuldemo.dao;
 
+import cn.edu.xmu.restfuldemo.mapper.GoodsMapper;
 import cn.edu.xmu.restfuldemo.mapper.ProductMapper;
 import cn.edu.xmu.restfuldemo.bean.*;
 //import cn.edu.xmu.restfuldemo.util.Common;
-import cn.edu.xmu.restfuldemo.bean.ProductsVo;
+import cn.edu.xmu.restfuldemo.bean.ProductVo;
 import cn.edu.xmu.restfuldemo.util.ReturnObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,12 +20,15 @@ public class ProductDao {
     @Autowired
     private ProductMapper productMapper;
 
-    public ReturnObject<List<Products>> findProduct(ProductsPo productsPo)
+    public ReturnObject<List<Product>> findProduct(ProductPo productPo)
     {
-        List<ProductsPo> productPos=productMapper.findProducts(productsPo);
-        List<Products> retProducts=new ArrayList<>(productPos.size());
-        GoodsPo goodsPo=null;
-
+        List<ProductPo> productPos=productMapper.findProduct(productPo);
+        List<Product> retProducts=new ArrayList<>(productPos.size());
+        for(ProductPo productPo1:productPos)
+        {
+            Product product=new Product((productPo1));
+        }
+        return new ReturnObject<>(retProducts);
 
     }
 }
