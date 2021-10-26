@@ -13,7 +13,7 @@ import java.util.Date;
 @Alias("GoodsPo")
 public class GoodsPo {
     private Integer id;
-    private Integer goods_spu_id;
+    private Integer goods_sku_id;
     private String sku_sn;
     private String name;
     private Integer original_price;
