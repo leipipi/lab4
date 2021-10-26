@@ -29,7 +29,7 @@ public class ProductsController {
     @Autowired
     private HttpServletResponse httpServletResponse;
 
-    @GetMapping("/noredis/{id}")
+    @GetMapping("/{id}")
     public Object getProductsById_noredis(@PathVariable("id") Integer id){
         ReturnObject<VoObject> returnObject=productsService.findById(id);
         ResponseCode code = returnObject.getCode();
