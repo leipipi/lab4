@@ -13,5 +13,18 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 
+
+@Repository
 public class ProductDao {
+    @Autowired
+    private ProductMapper productMapper;
+
+    public ReturnObject<List<Products>> findProduct(ProductsPo productsPo)
+    {
+        List<ProductsPo> productPos=productMapper.findProducts(productsPo);
+        List<Products> retProducts=new ArrayList<>(productPos.size());
+        GoodsPo goodsPo=null;
+
+
+    }
 }
