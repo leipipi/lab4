@@ -26,6 +26,19 @@ public class Goods implements VoObject {
     public String getName(){return goodsPo.getName();}
     public void setName(String Name){goodsPo.setName(Name);}
 
+    public Integer getBrand_id(){return goodsPo.getBrand_id();}
+    public void setBrand_id(Integer id){goodsPo.setBrand_id(id);}
+
+    public Integer getCategory_id(){return goodsPo.getCategory_id();}
+    public void setCategory_id(Integer id){goodsPo.setCategory_id(id);}
+
+    public Integer getFreight_id(){return goodsPo.getFreight_id();}
+    public void setFreight_id(Integer id){goodsPo.setFreight_id(id);}
+
+    public Integer getShop_id(){return goodsPo.getShop_id();}
+    public void setShop_id(Integer id){goodsPo.setShop_id(id);}
+
+
     public Integer getOriginal_price(){return goodsPo.getOriginal_price();}
     public void setOriginal_price(Integer original_price){goodsPo.setOriginal_price(original_price);}
 

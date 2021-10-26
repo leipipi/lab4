@@ -16,6 +16,10 @@ public class GoodsPo {
     private Integer goods_sku_id;
     private String sku_sn;
     private String name;
+    private Integer brand_id;
+    private Integer category_id;
+    private Integer freight_id;
+    private Integer shop_id;
     private Integer original_price;
     private String configuration;
     private Integer weight;
