@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Alias("ProductPo")
+@Alias("ProductsPo")
 public class ProductsPo {
     private Integer id;
     private Integer goodsId;
