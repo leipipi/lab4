@@ -31,17 +31,18 @@ public class ProductsService {
         ReturnObject<List<Products>> returnObject;
         if(redisUtil.hasKey(key))//缓存中有查询的数据
         {
-            returnObject=(ReturnObject<List<Products>>)redisUtil.get(key);
+//            returnObject=(ReturnObject<List<Products>>)redisUtil.get(key);
             ReturnObject<VoObject> retProducts = null;
-            if (returnObject.getCode().equals(ResponseCode.OK)) {
-                if (returnObject.getData().size() == 1) {
-                    retProducts = new ReturnObject<>(returnObject.getData().get(0));
-                }else{
-                    retProducts  = new ReturnObject<>(ResponseCode.RESOURCE_ID_NOTEXIST);
-                }
-            }else{
-                retProducts  = new ReturnObject<>(returnObject.getCode(), returnObject.getErrmsg());
-            }
+//            if (returnObject.getCode().equals(ResponseCode.OK)) {
+//                if (returnObject.getData().size() == 1) {
+//                    retProducts = new ReturnObject<>(returnObject.getData().get(0));
+//                }else{
+//                    retProducts  = new ReturnObject<>(ResponseCode.RESOURCE_ID_NOTEXIST);
+//                }
+//            }else{
+//                retProducts  = new ReturnObject<>(returnObject.getCode(), returnObject.getErrmsg());
+//            }
+            retProducts=(ReturnObject<VoObject>)redisUtil.get(key);
             System.out.println("此次查询使用了redis缓存");
             return retProducts;
         }
