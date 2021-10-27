@@ -10,21 +10,21 @@ import java.util.Date;
 public class GoodsRetVo {
     private Integer id;
     private String name;
-    private String goodsSn;
-    private String imageUrl;
+    private String goods_sn;
+    private String image_url;
     private Integer state;
-    private Date gmtCreate;
-    private Date gmtModified;
+    private Date gmt_create;
+    private Date gmt_modified;
     private Integer disabled;
     public GoodsRetVo(Goods goods)
     {
         this.id=goods.getId();
         this.name=goods.getName();
-        this.goodsSn=goods.getGoodsSn();
-        this.imageUrl=goods.getImageUrl();
+        this.goods_sn=goods.getGoodsSn();
+        this.image_url=goods.getImageUrl();
         this.state=goods.getState();
-        this.gmtCreate=goods.getGmtCreate();
-        this.gmtModified=goods.getGmtModified();
+        this.gmt_create=goods.getGmtCreate();
+        this.gmt_modified=goods.getGmtModified();
         this.disabled=goods.getDisabled();
     }
 

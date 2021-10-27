@@ -5,21 +5,21 @@ import java.util.Date;
 public class GoodsVo {
     private Integer id;
     private String name;
-    private String goodsSn;
-    private String imageUrl;
+    private String goods_sn;
+    private String image_url;
     private Integer state;
-    private Date gmtCreate;
-    private Date gmtModified;
+    private Date gmt_create;
+    private Date gmt_modified;
     private Integer disabled;
     public GoodsVo(Goods goods)
     {
         this.id=goods.getId();
         this.name=goods.getName();
-        this.goodsSn=goods.getGoodsSn();
-        this.imageUrl=goods.getImageUrl();
+        this.goods_sn=goods.getGoodsSn();
+        this.image_url=goods.getImageUrl();
         this.state=goods.getState();
-        this.gmtCreate=goods.getGmtCreate();
-        this.gmtModified=goods.getGmtModified();
+        this.gmt_create=goods.getGmtCreate();
+        this.gmt_modified=goods.getGmtModified();
         this.disabled=goods.getDisabled();
     }
     public Goods createGoodsVo()
@@ -27,11 +27,11 @@ public class GoodsVo {
         Goods goods=new Goods();
         goods.setId(this.id);
         goods.setName(this.name);
-        goods.setGoodsSn(this.goodsSn);
-        goods.setImageUrl(this.imageUrl);
+        goods.setGoodsSn(this.goods_sn);
+        goods.setImageUrl(this.image_url);
         goods.setState(this.state);
-        goods.setGmtCreate(this.gmtCreate);
-        goods.setGmtModified(this.gmtModified);
+        goods.setGmtCreate(this.gmt_create);
+        goods.setGmtModified(this.gmt_modified);
         goods.setDisabled(this.disabled);
         return goods;
     }
