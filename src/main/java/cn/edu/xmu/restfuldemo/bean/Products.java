@@ -4,7 +4,12 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-public class Products {
+public class Products implements VoObject {
+    @Override
+    public Object createVo(){
+
+        return new ProductsRetVo(this);
+    }
     private ProductsPo productsPo;
     public Products(){this.productsPo =new ProductsPo();}
     public Products(ProductsPo productsPo){this.productsPo = productsPo;}
