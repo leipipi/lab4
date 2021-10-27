@@ -27,6 +27,7 @@ public class ProductsPo {
     private String detail;
     private Date gmtCreate;
     private Date gmtModified;
-    private Integer disabled;
+    private Boolean disable;
+    private Boolean shareable;
     private List<GoodsPo> goods_list;
 }

@@ -17,6 +17,8 @@ public class ProductsRetVo {
     private Integer weight;
     private Date gmtCreate;
     private Date gmtModified;
+    private Boolean disable;
+    private Boolean shareable;
     private List<GoodsRetVo> goodsRetVos;
     public ProductsRetVo(Products products)
     {
@@ -32,6 +34,8 @@ public class ProductsRetVo {
         this.weight= products.getWeight();
         this.gmtCreate= products.getGmtCreate();
         this.gmtModified= products.getGmtModified();
+        this.disable=products.getDisable();
+        this.shareable=products.getShareable();
         if(null!=products.getGoods_list())
         {
             List<GoodsRetVo> GoodsRetVoList=new ArrayList<>(products.getGoods_list().size());

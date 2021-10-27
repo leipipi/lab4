@@ -2,13 +2,39 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.edu.xmu.restfuldemo.mapper.ProductMapper">
 
-    <resultMap type="ProductsPo" id="ProductsWithGoodsMap" autoMapping="true">
-        <id property="id" column="id"/>
-        <collection property="order_itemPoList" ofType="cn.edu.xmu.restfuldemo.bean.OrderItemPo" autoMapping="true">
-            <id property="id" column="orderItem_id"/>
-            <result property="couponActId" column="orderItem_coupon_activity_id"/>
-            <result property="gmtCreate" column="orderItem_gmt_create"/>
-            <result property="gmtModified" column="orderItem_gmt_modified"/>
-        </collection>
-    </resultMap>
+    <select id="findProducts" parameterType="ProductsPo" resultType="ProductsPo">
+        SELECT
+        id,
+        `name`,
+        sku_sn,
+        detail,
+        image_url,
+        original_price,
+        price,
+        inventory,
+        state,
+        weight,
+        gmt_create,
+        gmt_modified,
+        disable,
+        shareable
+        FROM products
+        WHERE
+        <if test="id!=null"> id = #{id} </if>
+    </select>
+
+    <select id="findGoods" parameterType="GoodsPo" resultType="GoodsPo">
+        SELECT
+        id,
+        name,
+        goods_sn,
+        image_url,
+        state,
+        gmt_create,
+        gmt_modified,
+        disable
+        FROM goods_sku
+        WHERE
+        <if test="id!=null">id = #{id} </if>
+    </select>
 </mapper>

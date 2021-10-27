@@ -31,7 +31,7 @@ public class ProductsService {
         ReturnObject<List<Products>> returnObject;
         if(redisUtil.hasKey(key))//缓存中有查询的数据
         {
-            returnObject=(Products)redisUtil.get(key);
+            returnObject=(ReturnObject<List<Products>>)redisUtil.get(key);
             ReturnObject<VoObject> retProducts = null;
             if (returnObject.getCode().equals(ResponseCode.OK)) {
                 if (returnObject.getData().size() == 1) {

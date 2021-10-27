@@ -121,13 +121,16 @@ public class Products {
         productsPo.setGmtModified(gmtModified);
     }
 
-    public Integer getDisabled() {
-        return productsPo.getDisabled();
+    public Boolean getDisable() {
+        return productsPo.getDisable();
     }
 
-    public void setDisabled(Integer disabled) {
-        productsPo.setDisabled(disabled);
+    public void setDisable(Boolean disabled) {
+        productsPo.setDisable(disabled);
     }
+
+    public Boolean getShareable(){return productsPo.getShareable();}
+    public void setShareable(Boolean shareable){productsPo.setShareable(shareable);}
 
     List<Goods> goods_list;
 

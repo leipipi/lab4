@@ -16,15 +16,23 @@ public class ProductDao {
     @Autowired
     private ProductMapper productMapper;
 
-    public ReturnObject<List<Products>> findProduct(ProductsPo productsPo)
+    public ReturnObject<List<Products>> findProducts(ProductsPo productsPo)
     {
-        List<ProductsPo> productsPos =productMapper.findProduct(productsPo);
+        List<ProductsPo> productsPos =productMapper.findProducts(productsPo);
         List<Products> retProducts=new ArrayList<>(productsPos.size());
-        for(ProductsPo productsPo1 : productsPos)
+        GoodsPo goodsPo=new GoodsPo();
+        for(ProductsPo goods:productsPos)
         {
-            Products products =new Products((productsPo1));
+            Products item=new Products(goods);
+            goodsPo.setId(goods.getGoodsId());
+            List<GoodsPo> goodsPos=productMapper.findGoods(goodsPo);
+            List<Goods> goodsList=new ArrayList<>(goodsPos.size());
+            for(GoodsPo Good:goodsPos){
+                Goods good=new Goods(Good);
+                goodsList.add(good);
+            }
+            item.setGoods_list(goodsList);
         }
         return new ReturnObject<>(retProducts);
-
     }
 }

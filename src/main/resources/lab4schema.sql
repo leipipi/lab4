@@ -15,7 +15,8 @@ CREATE TABLE  `products`(
     `detail` varchar(500) DEFAULT NULL,
     `gmt_create` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `gmt_modified` datetime DEFAULT NULL,
-    `disabled` tinyint DEFAULT NULL,
+    `disable` boolean DEFAULT NULL,
+    `shareable` boolean DEFAULT NULL,
     PRIMARY KEY (`id`)
 )ENGINE=InnoDB AUTO_INCREMENT=680 DEFAULT CHARSET=utf8;
 
@@ -44,7 +45,7 @@ CREATE TABLE `goods_sku` (
   `image_url` varchar(255) DEFAULT NULL,
   `inventory` int DEFAULT NULL,
   `detail` varchar(500) DEFAULT NULL,
-  `disabled` tinyint DEFAULT NULL,
+  `disable` boolean DEFAULT NULL,
   `gmt_create` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `gmt_modified` datetime DEFAULT NULL,
   `state` tinyint DEFAULT NULL,

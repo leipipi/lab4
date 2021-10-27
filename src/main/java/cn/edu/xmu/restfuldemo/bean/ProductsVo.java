@@ -17,6 +17,8 @@ public class ProductsVo {
     private Integer weight;
     private Date gmtCreate;
     private Date gmtModified;
+    private Boolean disable;
+    private Boolean shareable;
     private List<GoodsVo> goods_list;
     public ProductsVo(Products products)
     {
@@ -32,6 +34,8 @@ public class ProductsVo {
         this.weight= products.getWeight();
         this.gmtCreate= products.getGmtCreate();
         this.gmtModified= products.getGmtModified();
+        this.disable=products.getDisable();
+        this.shareable=products.getShareable();
         if(null!=this.goods_list)
         {
             List<Goods> newGoodsList = new ArrayList<>(this.goods_list.size());
