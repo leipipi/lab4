@@ -1,11 +1,11 @@
 package cn.edu.xmu.restfuldemo.service;
 
-import cn.edu.xmu.restfuldemo.bean.*;
+import cn.edu.xmu.restfuldemo.bean.Products;
+import cn.edu.xmu.restfuldemo.bean.ProductsPo;
+import cn.edu.xmu.restfuldemo.bean.VoObject;
 import cn.edu.xmu.restfuldemo.util.RedisUtil;
 import cn.edu.xmu.restfuldemo.util.ResponseCode;
-import org.slf4j.Logger;
 import cn.edu.xmu.restfuldemo.dao.ProductDao;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import cn.edu.xmu.restfuldemo.util.ReturnObject;
@@ -22,7 +22,7 @@ public class ProductsService {
     private ProductDao productDao;
 
     public ReturnObject<VoObject> findById(Integer id){
-        ProductPo queryObj = new ProductPo();
+        ProductsPo queryObj = new ProductsPo();
 
         String key="product"+id;//redis所需的key
 
@@ -31,7 +31,7 @@ public class ProductsService {
         ReturnObject<List<Products>> returnObject;
         if(redisUtil.hasKey(key))//缓存中有查询的数据
         {
-            returnObject=(Product)redisUtil.get(key);
+            returnObject=(Products)redisUtil.get(key);
             ReturnObject<VoObject> retProducts = null;
             if (returnObject.getCode().equals(ResponseCode.OK)) {
                 if (returnObject.getData().size() == 1) {

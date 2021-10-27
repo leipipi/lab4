@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.xmu.restfuldemo.mapper.ProductMapper">
+
+    <resultMap type="ProductsPo" id="ProductsWithGoodsMap" autoMapping="true">
+        <id property="id" column="id"/>
+        <collection property="order_itemPoList" ofType="cn.edu.xmu.restfuldemo.bean.OrderItemPo" autoMapping="true">
+            <id property="id" column="orderItem_id"/>
+            <result property="couponActId" column="orderItem_coupon_activity_id"/>
+            <result property="gmtCreate" column="orderItem_gmt_create"/>
+            <result property="gmtModified" column="orderItem_gmt_modified"/>
+        </collection>
+    </resultMap>
+</mapper>

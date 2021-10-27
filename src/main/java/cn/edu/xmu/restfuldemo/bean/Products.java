@@ -4,156 +4,158 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-public class Product {
-    private ProductPo productPo;
-    public Product(){this.productPo=new ProductPo();}
-    public Product(ProductPo productPo){this.productPo=productPo;}
+public class Products {
+    private ProductsPo productsPo;
+    public Products(){this.productsPo =new ProductsPo();}
+    public Products(ProductsPo productsPo){this.productsPo = productsPo;}
 
     public Integer getId() {
-        return productPo.getId();
+        return productsPo.getId();
     }
 
     public void setId(Integer id) {
-        productPo.setId(id);
+        productsPo.setId(id);
     }
 
     public Integer getGoodsId() {
-        return productPo.getGoodsId();
+        return productsPo.getGoodsId();
     }
 
     public void setGoodsId(Integer goodsId) {
-        productPo.setGoodsId(goodsId);
+        productsPo.setGoodsId(goodsId);
     }
 
     public Integer getProductSn() {
-        return productPo.getProductSn();
+        return productsPo.getProductSn();
     }
 
     public void setProductSn(Integer productSn) {
-        productPo.setProductSn(productSn);
+        productsPo.setProductSn(productSn);
     }
 
     public String getSkuSn() {
-        return productPo.getSkuSn();
+        return productsPo.getSkuSn();
     }
 
     public void setSkuSn(String skuSn) {
-        productPo.setSkuSn(skuSn);
+        productsPo.setSkuSn(skuSn);
     }
 
     public String getName() {
-        return productPo.getName();
+        return productsPo.getName();
     }
 
     public void setName(String name) {
-        productPo.setName(name);
+        productsPo.setName(name);
     }
 
     public Integer getOriginalPrice() {
-        return productPo.getOriginalPrice();
+        return productsPo.getOriginalPrice();
     }
 
     public void setOriginalPrice(Integer originalPrice) {
-        productPo.setOriginalPrice(originalPrice);
+        productsPo.setOriginalPrice(originalPrice);
     }
 
     public Integer getPrice() {
-        return productPo.getPrice();
+        return productsPo.getPrice();
     }
 
     public void setPrice(Integer price) {
-        productPo.setPrice(price);
+        productsPo.setPrice(price);
     }
 
     public Integer getWeight() {
-        return productPo.getWeight();
+        return productsPo.getWeight();
     }
 
     public void setWeight(Integer weight) {
-        productPo.setWeight(weight);
+        productsPo.setWeight(weight);
     }
 
     public String getImageUrl() {
-        return productPo.getImageUrl();
+        return productsPo.getImageUrl();
     }
 
     public void setImageUrl(String imageUrl) {
-        productPo.setImageUrl(imageUrl);
+        productsPo.setImageUrl(imageUrl);
     }
 
     public Integer getInventory() {
-        return productPo.getInventory();
+        return productsPo.getInventory();
     }
 
     public void setInventory(Integer inventory) {
-        productPo.setInventory(inventory);
+        productsPo.setInventory(inventory);
     }
 
     public Integer getState() {
-        return productPo.getState();
+        return productsPo.getState();
     }
 
     public void setState(Integer state) {
-        productPo.setState(state);
+        productsPo.setState(state);
     }
 
     public String getDetail() {
-        return productPo.getDetail();
+        return productsPo.getDetail();
     }
 
     public void setDetail(String detail) {
-        productPo.setDetail(detail);
+        productsPo.setDetail(detail);
     }
 
     public Date getGmtCreate() {
-        return productPo.getGmtCreate();
+        return productsPo.getGmtCreate();
     }
 
     public void setGmtCreate(Date gmtCreate) {
-        productPo.setGmtCreate(gmtCreate);
+        productsPo.setGmtCreate(gmtCreate);
     }
 
     public Date getGmtModified() {
-        return productPo.getGmtModified();
+        return productsPo.getGmtModified();
     }
 
     public void setGmtModified(Date gmtModified) {
-        productPo.setGmtModified(gmtModified);
+        productsPo.setGmtModified(gmtModified);
     }
 
     public Integer getDisabled() {
-        return productPo.getDisabled();
+        return productsPo.getDisabled();
     }
 
     public void setDisabled(Integer disabled) {
-        productPo.setDisabled(disabled);
+        productsPo.setDisabled(disabled);
     }
 
-    public Goods getGoods() {
-        return productPo.getGoods();
+    List<Goods> goods_list;
+
+    public List<Goods> getGoods_list() {
+        return goods_list;
     }
 
-    public void setGoods(Goods goods) {
-        productPo.setGoods(goods);
+    public void setGoods_list(List<Goods> goods_list) {
+        this.goods_list=goods_list;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
-        return Objects.equals(productPo, product.productPo);
+        Products products = (Products) o;
+        return Objects.equals(productsPo, products.productsPo);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(productPo);
+        return Objects.hash(productsPo);
     }
 
     @Override
     public String toString() {
         return "Product{" +
-                "productPo=" + productPo +
+                "productPo=" + productsPo +
                 '}';
     }
 }

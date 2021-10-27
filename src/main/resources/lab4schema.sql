@@ -1,6 +1,6 @@
 
-DROP TABLE IF EXISTS `product`;
-CREATE TABLE  `product`(
+DROP TABLE IF EXISTS `products`;
+CREATE TABLE  `products`(
     `id` bigint NOT NULL AUTO_INCREMENT,
     `goods_id` bigint DEFAULT NULL,
     `product_sn` bigint DEFAULT NULL,

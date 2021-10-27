@@ -22,4 +22,17 @@ public class GoodsVo {
         this.gmtModified=goods.getGmtModified();
         this.disabled=goods.getDisabled();
     }
+    public Goods createGoodsVo()
+    {
+        Goods goods=new Goods();
+        goods.setId(this.id);
+        goods.setName(this.name);
+        goods.setGoodsSn(this.goodsSn);
+        goods.setImageUrl(this.imageUrl);
+        goods.setState(this.state);
+        goods.setGmtCreate(this.gmtCreate);
+        goods.setGmtModified(this.gmtModified);
+        goods.setDisabled(this.disabled);
+        return goods;
+    }
 }

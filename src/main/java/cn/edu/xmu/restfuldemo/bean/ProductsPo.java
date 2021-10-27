@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Alias("ProductPo")
-public class ProductPo {
+public class ProductsPo {
     private Integer id;
     private Integer goodsId;
     private Integer productSn;
@@ -28,5 +28,5 @@ public class ProductPo {
     private Date gmtCreate;
     private Date gmtModified;
     private Integer disabled;
-    private Goods goods;
+    private List<GoodsPo> goods_list;
 }

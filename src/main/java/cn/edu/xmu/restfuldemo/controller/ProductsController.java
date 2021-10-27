@@ -1,15 +1,13 @@
 package cn.edu.xmu.restfuldemo.controller;
 
 
-import cn.edu.xmu.restfuldemo.bean.ProductRetVo;
+import cn.edu.xmu.restfuldemo.bean.ProductsRetVo;
 import cn.edu.xmu.restfuldemo.bean.VoObject;
 import cn.edu.xmu.restfuldemo.service.ProductsService;
 import cn.edu.xmu.restfuldemo.util.ResponseCode;
 import cn.edu.xmu.restfuldemo.util.ResponseUtil;
 import cn.edu.xmu.restfuldemo.util.ReturnObject;
 import io.swagger.annotations.Api;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,7 +39,7 @@ public class ProductsController {
                 return ResponseUtil.fail(returnObject.getCode(), returnObject.getErrmsg());
             //成功找到
             case OK:
-                ProductRetVo productsRetVo = (ProductRetVo) returnObject.getData().createVo();
+                ProductsRetVo productsRetVo = (ProductsRetVo) returnObject.getData().createVo();
                 return ResponseUtil.ok(productsRetVo);
             default:
                 return ResponseUtil.fail(code);
