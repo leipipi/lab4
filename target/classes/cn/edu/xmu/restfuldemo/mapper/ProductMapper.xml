@@ -22,6 +22,7 @@
             `name`,
             sku_sn,
             detail,
+            goods_id,
             image_url,
             original_price,
             price,
@@ -34,7 +35,7 @@
             shareable
         FROM products
         WHERE
-        <if test="id!=null"> id = #{id} </if>
+        id = #{id}
     </select>
 
 

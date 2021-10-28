@@ -1,9 +1,12 @@
 package cn.edu.xmu.restfuldemo.bean;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@Data
 public class ProductsRetVo {
     private Integer id;
     private String name;
