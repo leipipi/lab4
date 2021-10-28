@@ -26,10 +26,10 @@ CREATE TABLE  `products`(
 -- Table structure for table `goods_sku`
 --
 
-DROP TABLE IF EXISTS `goods_sku`;
+DROP TABLE IF EXISTS `goods`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `goods_sku` (
+CREATE TABLE `goods` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `goods_sku_id` bigint DEFAULT NULL,
   `sku_sn` varchar(128) DEFAULT NULL,

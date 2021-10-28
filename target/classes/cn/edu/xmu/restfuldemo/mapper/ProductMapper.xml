@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.edu.xmu.restfuldemo.mapper.ProductMapper">
-
     <select id="findGoods" parameterType="GoodsPo" resultType="GoodsPo">
         SELECT
-        id
-        FROM goods_sku
+            id,
+            `name`,
+            goods_sn,
+            image_url,
+            `state`,
+            gmt_create,
+            gmt_modified,
+            disable
+        FROM goods
         WHERE
-        <if test="id!=null"> id = #{id} </if>
+        id = #{id}
     </select>
 
     <select id="findProducts" parameterType="ProductsPo" resultType="ProductsPo">

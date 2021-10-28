@@ -18,6 +18,7 @@ public class ProductDao {
 
     public ReturnObject<List<Products>> findProducts(ProductsPo productsPo)
     {
+        System.out.println("daozhong---------------");
         List<ProductsPo> productsPos =productMapper.findProducts(productsPo);
         List<Products> retProducts=new ArrayList<>(productsPos.size());
         GoodsPo goodsPo=new GoodsPo();
@@ -25,7 +26,6 @@ public class ProductDao {
         {
             Products item=new Products(goods);
             goodsPo.setId(goods.getGoodsId());
-            System.out.println("daozhe");
             List<GoodsPo> goodsPos=productMapper.findGoods(goodsPo);
             List<Goods> goodsList=new ArrayList<>(goodsPos.size());
             for(GoodsPo Good:goodsPos){
