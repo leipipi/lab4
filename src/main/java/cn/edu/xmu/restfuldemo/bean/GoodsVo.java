@@ -1,7 +1,10 @@
 package cn.edu.xmu.restfuldemo.bean;
 
+import lombok.Data;
+
 import java.util.Date;
 
+@Data
 public class GoodsVo {
     private Integer id;
     private String name;
@@ -10,7 +13,7 @@ public class GoodsVo {
     private Integer state;
     private Date gmt_create;
     private Date gmt_modified;
-    private Integer disabled;
+    private Boolean disable;
     public GoodsVo(Goods goods)
     {
         this.id=goods.getId();
@@ -20,7 +23,7 @@ public class GoodsVo {
         this.state=goods.getState();
         this.gmt_create=goods.getGmtCreate();
         this.gmt_modified=goods.getGmtModified();
-        this.disabled=goods.getDisabled();
+        this.disable=goods.getDisabled();
     }
     public Goods createGoodsVo()
     {
@@ -32,7 +35,7 @@ public class GoodsVo {
         goods.setState(this.state);
         goods.setGmtCreate(this.gmt_create);
         goods.setGmtModified(this.gmt_modified);
-        goods.setDisabled(this.disabled);
+        goods.setDisabled(this.disable);
         return goods;
     }
 }

@@ -27,7 +27,7 @@ public class GoodsPo {
     private String image_url;
     private Integer inventory;
     private String detail;
-    private Integer disabled;
+    private Boolean disable;
     private Date gmt_create;
     private Date gmt_modified;
     private Integer state;

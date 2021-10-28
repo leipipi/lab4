@@ -11,7 +11,6 @@ cn\edu\xmu\restfuldemo\util\JacksonUtil$2.class
 cn\edu\xmu\restfuldemo\util\RedisUtil.class
 cn\edu\xmu\restfuldemo\controller\ProductsController$1.class
 cn\edu\xmu\restfuldemo\config\Swagger2Configuration.class
-cn\edu\xmu\restfuldemo\mapper\GoodsMapper.class
 cn\edu\xmu\restfuldemo\DemoApplication.class
 cn\edu\xmu\restfuldemo\bean\VoObject.class
 cn\edu\xmu\restfuldemo\util\JacksonUtil$3.class
@@ -22,7 +21,6 @@ cn\edu\xmu\restfuldemo\bean\GoodsVo.class
 cn\edu\xmu\restfuldemo\util\ReturnObject.class
 cn\edu\xmu\restfuldemo\controller\ProductsController.class
 cn\edu\xmu\restfuldemo\util\ResponseCode.class
-cn\edu\xmu\restfuldemo\dao\GoodsDao.class
 cn\edu\xmu\restfuldemo\util\Common$1.class
 cn\edu\xmu\restfuldemo\config\CorsConfig.class
 cn\edu\xmu\restfuldemo\service\ProductsService.class

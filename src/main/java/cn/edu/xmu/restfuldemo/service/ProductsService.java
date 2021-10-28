@@ -15,8 +15,8 @@ import java.util.List;
 @Service
 public class ProductsService {
 
-    @Autowired
-    private RedisUtil redisUtil;
+//    @Autowired
+//    private RedisUtil redisUtil;
 
     @Autowired
     private ProductDao productDao;
@@ -29,10 +29,10 @@ public class ProductsService {
 
         queryObj.setId(id);
         ReturnObject<List<Products>> returnObject;
-        if(redisUtil.hasKey(key))//缓存中有查询的数据
+//        if(redisUtil.hasKey(key))//缓存中有查询的数据
         {
 //            returnObject=(ReturnObject<List<Products>>)redisUtil.get(key);
-            ReturnObject<VoObject> retProducts = null;
+//            ReturnObject<VoObject> retProducts = null;
 //            if (returnObject.getCode().equals(ResponseCode.OK)) {
 //                if (returnObject.getData().size() == 1) {
 //                    retProducts = new ReturnObject<>(returnObject.getData().get(0));
@@ -42,11 +42,11 @@ public class ProductsService {
 //            }else{
 //                retProducts  = new ReturnObject<>(returnObject.getCode(), returnObject.getErrmsg());
 //            }
-            retProducts=(ReturnObject<VoObject>)redisUtil.get(key);
-            System.out.println("此次查询使用了redis缓存");
-            return retProducts;
-        }
-        else{
+//            retProducts=(ReturnObject<VoObject>)redisUtil.get(key);
+//            System.out.println("此次查询使用了redis缓存");
+//            return retProducts;
+//        }
+//        else{
             returnObject=productDao.findProducts(queryObj);
             ReturnObject<VoObject> retProducts = null;
             if (returnObject.getCode().equals(ResponseCode.OK)) {
@@ -59,7 +59,7 @@ public class ProductsService {
                 retProducts  = new ReturnObject<>(returnObject.getCode(), returnObject.getErrmsg());
             }
             System.out.println("此次查询在数据库中进行");
-            System.out.println(redisUtil.set(key,retProducts) ? "该信息不在缓存中,插入缓存,插入成功" : "插入失败");
+//            System.out.println(redisUtil.set(key,retProducts) ? "该信息不在缓存中,插入缓存,插入成功" : "插入失败");
             return retProducts ;
         }
     }

@@ -15,7 +15,7 @@ public class GoodsRetVo {
     private Integer state;
     private Date gmt_create;
     private Date gmt_modified;
-    private Integer disabled;
+    private Boolean disable;
     public GoodsRetVo(Goods goods)
     {
         this.id=goods.getId();
@@ -25,7 +25,7 @@ public class GoodsRetVo {
         this.state=goods.getState();
         this.gmt_create=goods.getGmtCreate();
         this.gmt_modified=goods.getGmtModified();
-        this.disabled=goods.getDisabled();
+        this.disable=goods.getDisabled();
     }
 
 }

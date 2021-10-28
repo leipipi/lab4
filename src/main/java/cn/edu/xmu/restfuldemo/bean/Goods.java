@@ -59,8 +59,8 @@ public class Goods implements VoObject {
     public String getDetail(){return goodsPo.getDetail();}
     public void setDetail(String detail){goodsPo.setDetail(detail);}
 
-    public Integer getDisabled(){return goodsPo.getDisabled();}
-    public void setDisabled(Integer disavled){goodsPo.setDisabled(disavled);}
+    public Boolean getDisabled(){return goodsPo.getDisable();}
+    public void setDisabled(Boolean disable){goodsPo.setDisable(disable);}
 
     public Date getGmtCreate(){return goodsPo.getGmt_create();}
     public void setGmtCreate(Date date){goodsPo.setGmt_create(date);}

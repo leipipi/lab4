@@ -39,11 +39,11 @@ public class Products implements VoObject {
     }
 
     public String getSkuSn() {
-        return productsPo.getSkuSn();
+        return productsPo.getSku_sn();
     }
 
     public void setSkuSn(String skuSn) {
-        productsPo.setSkuSn(skuSn);
+        productsPo.setSku_sn(skuSn);
     }
 
     public String getName() {
@@ -55,11 +55,11 @@ public class Products implements VoObject {
     }
 
     public Integer getOriginalPrice() {
-        return productsPo.getOriginalPrice();
+        return productsPo.getOriginal_price();
     }
 
     public void setOriginalPrice(Integer originalPrice) {
-        productsPo.setOriginalPrice(originalPrice);
+        productsPo.setOriginal_price(originalPrice);
     }
 
     public Integer getPrice() {
@@ -79,11 +79,11 @@ public class Products implements VoObject {
     }
 
     public String getImageUrl() {
-        return productsPo.getImageUrl();
+        return productsPo.getImage_url();
     }
 
     public void setImageUrl(String imageUrl) {
-        productsPo.setImageUrl(imageUrl);
+        productsPo.setImage_url(imageUrl);
     }
 
     public Integer getInventory() {
@@ -111,19 +111,19 @@ public class Products implements VoObject {
     }
 
     public Date getGmtCreate() {
-        return productsPo.getGmtCreate();
+        return productsPo.getGmt_create();
     }
 
     public void setGmtCreate(Date gmtCreate) {
-        productsPo.setGmtCreate(gmtCreate);
+        productsPo.setGmt_create(gmtCreate);
     }
 
     public Date getGmtModified() {
-        return productsPo.getGmtModified();
+        return productsPo.getGmt_modified();
     }
 
     public void setGmtModified(Date gmtModified) {
-        productsPo.setGmtModified(gmtModified);
+        productsPo.setGmt_create(gmtModified);
     }
 
     public Boolean getDisable() {

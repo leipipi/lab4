@@ -14,20 +14,22 @@ import java.util.List;
 @Alias("ProductsPo")
 public class ProductsPo {
     private Integer id;
-    private Integer goodsId;
-    private Integer productSn;
-    private String skuSn;
     private String name;
-    private Integer originalPrice;
+    private String sku_sn;
+    private String detail;
+    private String image_url;
+    private Integer original_price;
     private Integer price;
-    private Integer weight;
-    private String imageUrl;
     private Integer inventory;
     private Integer state;
-    private String detail;
-    private Date gmtCreate;
-    private Date gmtModified;
+    private Integer weight;
+    private Date gmt_create;
+    private Date gmt_modified;
     private Boolean disable;
     private Boolean shareable;
+
+    private Integer goodsId;
+    private Integer productSn;
+
     private List<GoodsPo> goods_list;
 }
