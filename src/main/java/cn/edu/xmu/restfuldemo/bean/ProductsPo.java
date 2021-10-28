@@ -28,7 +28,7 @@ public class ProductsPo {
     private Boolean disable;
     private Boolean shareable;
 
-    private Integer goodsId;
+    private Integer goods_id;
     private Integer productSn;
 
     private List<GoodsPo> goods_list;

@@ -1,10 +1,11 @@
 package cn.edu.xmu.restfuldemo.bean;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-public class Products implements VoObject {
+public class Products implements VoObject , Serializable {
     @Override
     public Object createVo(){
 
@@ -23,11 +24,11 @@ public class Products implements VoObject {
     }
 
     public Integer getGoodsId() {
-        return productsPo.getGoodsId();
+        return productsPo.getGoods_id();
     }
 
     public void setGoodsId(Integer goodsId) {
-        productsPo.setGoodsId(goodsId);
+        productsPo.setGoods_id(goodsId);
     }
 
     public Integer getProductSn() {
