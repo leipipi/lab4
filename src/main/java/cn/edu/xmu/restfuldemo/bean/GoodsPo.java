@@ -31,5 +31,6 @@ public class GoodsPo {
     private Date gmt_create;
     private Date gmt_modified;
     private Integer state;
+    private Integer product_id;
 
 }

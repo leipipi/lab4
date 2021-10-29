@@ -71,7 +71,7 @@ public class ProductDao {
         List<Products> retProducts=new ArrayList<>(1);
         List<ProductsPo> productsPos =productMapper.findProducts(productsPo);
         GoodsPo goodsPo=new GoodsPo();
-        goodsPo.setId(productsPos.get(0).getGoods_id());
+        goodsPo.setProduct_id(productsPos.get(0).getId());
         List<GoodsPo> goodsPos=productMapper.findGoods(goodsPo);
         List<Goods> goodsList=new ArrayList<>(goodsPos.size());
         Products products=new Products(productsPos.get(0));

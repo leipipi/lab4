@@ -10,10 +10,11 @@
             `state`,
             gmt_create,
             gmt_modified,
-            disable
+            disable,
+            product_id
         FROM goods
         WHERE
-        id = #{id}
+        product_id = #{product_id}
     </select>
 
     <select id="findProducts" parameterType="ProductsPo" resultType="ProductsPo">

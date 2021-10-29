@@ -70,4 +70,7 @@ public class Goods implements VoObject {
 
     public Integer getState(){return goodsPo.getState();}
     public void setState(Integer state){goodsPo.setState(state);}
+
+    public Integer getProductId(){return goodsPo.getProduct_id();}
+    public void setProductId(Integer id){goodsPo.setProduct_id(id);}
 }
