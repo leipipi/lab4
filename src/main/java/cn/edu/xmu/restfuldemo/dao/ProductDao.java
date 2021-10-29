@@ -66,4 +66,21 @@ public class ProductDao {
         }
         return new ReturnObject<>(retProducts);
     }
+    public ReturnObject<List<Products>> findProductsWithoutRedis(ProductsPo productsPo)
+    {
+        List<Products> retProducts=new ArrayList<>(1);
+        List<ProductsPo> productsPos =productMapper.findProducts(productsPo);
+        GoodsPo goodsPo=new GoodsPo();
+        goodsPo.setId(productsPos.get(0).getGoods_id());
+        List<GoodsPo> goodsPos=productMapper.findGoods(goodsPo);
+        List<Goods> goodsList=new ArrayList<>(goodsPos.size());
+        Products products=new Products(productsPos.get(0));
+        for(GoodsPo Good:goodsPos){
+            Goods good=new Goods(Good);
+            goodsList.add(good);
+        }
+        products.setGoods_list(goodsList);
+        retProducts.add(products);
+        return new ReturnObject<>(retProducts);
+    }
 }

@@ -28,5 +28,13 @@ public class ProductsService {
        retProducts=new ReturnObject<>(returnObject.getData().get(0));
        return retProducts;
     }
+    public ReturnObject<VoObject> findByIdWithoutRedis(Integer id){
+        ProductsPo queryObj = new ProductsPo();
+        queryObj.setId(id);
+        ReturnObject<List<Products>> returnObject=productDao.findProductsWithoutRedis(queryObj);
+        ReturnObject<VoObject> retProducts=null;
+        retProducts=new ReturnObject<>(returnObject.getData().get(0));
+        return retProducts;
+    }
 }
 

@@ -29,8 +29,26 @@ public class ProductsController {
     private HttpServletResponse httpServletResponse;
 
     @GetMapping("/{id}")
-    public Object getProductsById_noredis(@PathVariable("id") Integer id){
+    public Object getProductsById(@PathVariable("id") Integer id){
         ReturnObject<VoObject> returnObject=productsService.findById(id);
+        ResponseCode code = returnObject.getCode();
+        switch (code){
+            //表示操作的资源id不存在,设置http状态码为NOT_FOUND 即404
+            case RESOURCE_ID_NOTEXIST:
+                httpServletResponse.setStatus(HttpStatus.NOT_FOUND.value());
+                return ResponseUtil.fail(returnObject.getCode(), returnObject.getErrmsg());
+            //成功找到
+            case OK:
+                ProductsRetVo productsRetVo = (ProductsRetVo) returnObject.getData().createVo();
+                return ResponseUtil.ok(productsRetVo);
+            default:
+                return ResponseUtil.fail(code);
+        }
+    }
+
+    @GetMapping("/noredis/{id}")
+    public Object getProductsById_noredis(@PathVariable("id") Integer id){
+        ReturnObject<VoObject> returnObject=productsService.findByIdWithoutRedis(id);
         ResponseCode code = returnObject.getCode();
         switch (code){
             //表示操作的资源id不存在,设置http状态码为NOT_FOUND 即404
