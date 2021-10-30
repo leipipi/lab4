@@ -29,11 +29,9 @@ public class ProductDao {
         String key="p_"+productsPo.getId();//redis所需的key
         if(redisUtil.hasKey(key))//缓存中有查询的数据
         {
-            //System.out.println("use redis,key:"+key);
             Products products=(Products)redisUtil.get(key);
             GoodsPo goodsPo=new GoodsPo();
                 goodsPo.setId(products.getGoodsId());
-                //System.out.println(products.getGoodsId()+"-------111111111");
                 List<GoodsPo> goodsPos=productMapper.findGoods(goodsPo);
                 List<Goods> goodsList=new ArrayList<>(goodsPos.size());
                 for(GoodsPo Good:goodsPos){
@@ -61,7 +59,6 @@ public class ProductDao {
         }
         if(retProducts.size()!=0)
         {
-            //System.out.println("add into redis");
             redisUtil.set(key, retProducts.get(0), 600);
         }
         return new ReturnObject<>(retProducts);

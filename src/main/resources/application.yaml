@@ -14,9 +14,9 @@ spring:
         url: http://localhost:8081
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://172.16.2.84:3306/lab2?serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/lab2?serverTimezone=GMT%2B8
     username: root
-    password: 123456
+    password: cyx2000!
     type: com.alibaba.druid.pool.DruidDataSource
     initialization-mode: always
     schema: classpath:lab4schema.sql
@@ -49,10 +49,14 @@ spring:
     database: 0
     host: localhost
     port: 6379
-    timeout: 5000
     password:
-
-    
+    lettuce:
+      pool:
+        max-active: 100
+        max-idle: 100
+        min-idle: 0
+        max-wait: -1
+    timeout: 5000
 
 
 mybatis:

@@ -9,6 +9,5 @@ import java.util.List;
 
 public interface ProductMapper {
     List<ProductsPo> findProducts(ProductsPo productPo);
-
     List<GoodsPo> findGoods(GoodsPo goodsPo);
 }

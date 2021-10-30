@@ -1,0 +1,6 @@
+2021-10-29 12:09:12.416 [main] INFO  cn.edu.xmu.restfuldemo.DemoApplication - Starting DemoApplication using Java 11.0.11 on DESKTOP-7P6EIO5 with PID 12164 (D:\2021秋季\JaveEE\exp\lab4\target\classes started by ChenYixuan in D:\2021秋季\JaveEE\exp\lab4)
+2021-10-29 12:09:12.417 [main] INFO  cn.edu.xmu.restfuldemo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-10-29 12:09:17.388 [main] INFO  cn.edu.xmu.restfuldemo.DemoApplication - Started DemoApplication in 5.242 seconds (JVM running for 5.725)
+2021-10-29 13:03:37.671 [main] INFO  cn.edu.xmu.restfuldemo.DemoApplication - Starting DemoApplication using Java 11.0.11 on DESKTOP-7P6EIO5 with PID 5920 (D:\2021秋季\JaveEE\exp\lab4\target\classes started by ChenYixuan in D:\2021秋季\JaveEE\exp\lab4)
+2021-10-29 13:03:37.673 [main] INFO  cn.edu.xmu.restfuldemo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-10-29 13:03:42.547 [main] INFO  cn.edu.xmu.restfuldemo.DemoApplication - Started DemoApplication in 5.113 seconds (JVM running for 5.571)
